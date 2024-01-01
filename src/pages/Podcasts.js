@@ -22,6 +22,7 @@ const PodcastPage = () => {
         const podcastsData = [];
         querySnapshot.forEach((doc) => {
           podcastsData.push({ id: doc.id, ...doc.data() });
+          //creating a new object with the id attached to the data
         });
         dispatch(setPodcasts(podcastsData));
       },
@@ -32,7 +33,7 @@ const PodcastPage = () => {
     return () => {
       unsubscribe();
     };
-  }, [dispatch]);
+  }, [dispatch]); //formality
 
   console.log(podcasts);
 

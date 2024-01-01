@@ -19,8 +19,12 @@ const PodcastDetailsPage = () => {
   const [podcast, setPodcast] = useState({});
   const [episodes, setEpisodes] = useState([]);
   const navigate = useNavigate();
-  const { id } = useParams();
+
+  const { id } = useParams();//this is the document id
+  //useParams hook is used when you create dynamic routes and display content based on the URL parameters
+
   const [playingFile, setPlayingFile] = useState("");
+
   console.log("ID", id);
   // we can now fetch all the data abt the podcast from firebase using id
   useEffect(() => {
@@ -47,7 +51,7 @@ const PodcastDetailsPage = () => {
     }
   };
 
-  // frtching details of episodes
+  // fetching details of episodes
   useEffect(() => {
     const unscubscribe = onSnapshot(
       query(collection(db, "podcasts", id, "episodes")),
@@ -66,6 +70,8 @@ const PodcastDetailsPage = () => {
       unscubscribe();
     };
   }, [id]);
+
+
   return (
     <div>
       <Header />

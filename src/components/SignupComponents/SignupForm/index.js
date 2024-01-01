@@ -2,17 +2,14 @@ import React from "react";
 import { useState } from "react";
 import InputComponent from "../../common/input";
 import Button from "../../common/Button";
-import { useDispatch } from "react-redux";
-import { setUser } from "../../../slices/userSlice";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-import { auth, db, storage } from "../../../firebase";
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signOut,
-} from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../../slices/userSlice";
+
+import { auth, db } from "../../../firebase";
+import {createUserWithEmailAndPassword} from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
 
 const SignupForm = () => {

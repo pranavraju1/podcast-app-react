@@ -3,16 +3,12 @@ import { useState } from "react";
 import InputComponent from "../../common/input";
 import Button from "../../common/Button";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { setUser } from "../../../slices/userSlice";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signOut,
-} from "firebase/auth";
-import { auth, db, storage } from "../../../firebase";
+import {signInWithEmailAndPassword} from "firebase/auth";
+import { auth, db} from "../../../firebase";
 import { getDoc, doc } from "firebase/firestore";
 
 const LoginForm = () => {

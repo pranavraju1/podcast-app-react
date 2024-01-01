@@ -12,8 +12,7 @@ const initialState = {
 
 const userSlice = createSlice({
   name: "user",
-  // this is similar to nameing the variable
-  // this is the name of the slice
+  // this is similar to naming the variable it is the name of the slice
   initialState,
   reducers: {
     setUser: (state, action) => {
@@ -25,7 +24,7 @@ const userSlice = createSlice({
   },
   // state and action are inbuilt functions
   // state.user is the user object
-  // action.payload contains the data
+  // action.payload contains the data associated with the action
 });
 
 export const { setUser, clearUser } = userSlice.actions;

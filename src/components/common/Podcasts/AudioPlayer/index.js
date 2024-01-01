@@ -39,9 +39,13 @@ const AudioPlayer = ({ audioSrc, image }) => {
   useEffect(() => {
     const audio = audioRef.current;
     audio.addEventListener("timeupdate", handleTimeUpdate);
+    // used to update the currentTime
     audio.addEventListener("loadedmetadata", handleLoadMetadata);
+    // used for updating the duration
     audio.addEventListener("ended", handleEnded);
+    // triggered when the audio playback is compelete
 
+    // cleaning up the event listeners to prevent memory leaks
     return () => {
       audio.removeEventListener("timeupdate", handleTimeUpdate);
       audio.removeEventListener("loadedmetadata", handleLoadMetadata);
