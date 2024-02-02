@@ -92,7 +92,10 @@ const AudioPlayer = ({ audioSrc, image }) => {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+    // mm:ss format, seconds less than 10 get a 0 prefix 
+    // if 75 seconds it will return 01:15
   };
+
 
   return (
     <div className="custom-audio-player">

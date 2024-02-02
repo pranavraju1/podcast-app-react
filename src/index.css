@@ -3,6 +3,7 @@
 /* root variables: its a good practice to use them as they behave as global variables in css
   background-color: var(--theme)
 */
+
 :root{
   --theme:#20062e;
   --blue: #18b2de;
@@ -10,6 +11,7 @@
   --grey: #d7d7d7;
   --purple-grey: #8f8297;
 }
+
 
 
 body {

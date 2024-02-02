@@ -8,7 +8,7 @@ const SignUpPage = () => {
   // the above flag is for the last p tag where the user may already have an account or login
   // if flag is false then SignUp else Login
   return (
-    <div>
+    <div className="big-container">
       <Header />
       <div className="input-wrapper">
         {!flag ? <h1>Signup</h1> : <h1>Login</h1>}

@@ -32,3 +32,9 @@
   color: var(--white) !important;
   /* have to make important to get default highlighting */
 }
+
+@media (max-width:738px){
+  .gradient{
+    width: 100%;
+  }
+}

@@ -30,6 +30,14 @@ body::-webkit-scrollbar {
   gap: 05rem;
   width: 50%;
 }
+@media (max-width:738px){
+  .duration-flex{
+    gap: 3px;
+  }
+  .custom-audio-player{
+    gap: 10px;
+  }
+}
 .volume-range{
   filter: hue-rotate(25deg);
   width: 10%;

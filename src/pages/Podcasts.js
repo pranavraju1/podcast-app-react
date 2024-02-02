@@ -14,7 +14,7 @@ const PodcastPage = () => {
 
   // every time this page is loaded we want to fetch the data from the firebase
   useEffect(() => {
-    // data will be stored in querySnapshot then we are puch the data in podcastData
+    // data will be stored in querySnapshot then we are push the data in podcastData
     // with id bc we have not stored the id in podcast firebase
     const unsubscribe = onSnapshot(
       query(collection(db, "podcasts")),
